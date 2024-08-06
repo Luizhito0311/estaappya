@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>cloname de pelix</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="trailer"> 
+            <video src="video/theboys.webm" class="trail" autoplay muted></video>
+        </div>
+        <nav>
+            <div class="logo_ul">
+                <img src="img/logo.png" alt="">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" id="movies">Peliculas</a>
+                    </li>
+                    <li>
+                        <a href="#" id="series">Series</a>
+                    </li>
+                    <li>
+                        <a href="#">Programas TV</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search_user">
+                <input type="text" placeholder="search..." id="search_input">
+                <img src="img/user.jpg" alt="">
+                <div class="search">
+                    <a href="#" class="card">
+                        <img src="img/the boys.jpg" alt="">
+                        <div class="cont">
+                            <h3>The boys</h3>
+                            <p>Accion, 2021 , <span>IMDB</span><i class="bi bi-star-fill"></i> 9.6</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <h1 id="title">The boys</h1>
+            <p>Una banda organizada de ladrones se propone cometer el atraco del siglo en la Fábrica Nacional de Moneda y Timbre. Cinco meses de preparación quedarán reducidos a once días para poder llevar a cabo con éxito el gran golpe.</p>
+            <div class="details">
+                <h6>Original de netflix</h6>
+                <h5 id="gen">thriller</h5>
+                <h4 id="date">2021</h4>
+                <h3 id="rate"><span>IMDB</span><i class="bi bi-star-fill"></i> 9.6</h3>
+            </div>
+            <div class="btns">
+
+                <a href="Reproductor/player.js" id="play">Trailer <i class="bi bi-pause-fill"></i></a>
+                <a href="#" id="play">Play <i class="bi bi-play-fill"></i></a>
+            </div>
+        </div>
+
+        <!-- imagenes background de fondo 
+        <div class="thumbail">
+            <div>
+                <img src="" alt="Imagen background" class="main_img" id="peliculas_fondo">
+            </div>
+        </div> -->
+
+        <section>
+
+            <h2>Películas Populares</h2>
+            <div class="cards" id="peliculas_populares">
+                <div class="">  
+                </div>
+            </div> 
+            
+            <h2>Series Populares</h2>
+            <div class="cards" id="series_populares">
+                <div class="">
+                </div>
+            </div>
+            
+            <h2>Películas de Estreno</h2>
+            <div class="cards" id="peliculas_estreno">
+                <div class="">
+                </div>
+            </div>        
+                    
+            <h2>Picardia Mexicana</h2>
+            <div class="cards" id="picardia_mexicana">
+                <a href="peliculas/"><img src=""></a>
+                
+                </div>
+            </div>
+            
+        </section>
+            
+    </header>
+    <script src="main.js"></script>
+
+</body>
+</html>

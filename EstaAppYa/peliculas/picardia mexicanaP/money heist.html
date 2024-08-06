@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>Money Heist | MisPeliculas</title>
+</head>
+
+<body>
+    
+    <header>
+
+        <div class="trailer">
+            <img class="fondo" src="" alt="">
+            <video src="" class="trail" autoplay loop muted></video>
+        </div>
+
+        <nav>
+            <div class="logo_ul">
+                <img src="img/logo.png" alt="">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" id="movies">Peliculas</a>
+                    </li>
+                    <li>
+                        <a href="#" id="series">Series</a>
+                    </li>
+                    <li>
+                        <a href="#">Programas TV</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search_user">
+                <input type="text" placeholder="search..." id="search_input">
+                <img src="img/user.jpg" alt="">
+                <div class="search">
+                    <a href="#" class="card">
+                        <img src="img/the boys.jpg" alt="">
+                        <div class="cont">
+                            <h3> </h3>
+                            <p> , , <span>IMDB</span><i class="bi bi-star-fill"></i> </p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <h1 id="title"> </h1>
+            <p>Una banda organizada de ladrones se propone cometer el atraco del siglo en la Fábrica Nacional de Moneda y Timbre. Cinco meses de preparación quedarán reducidos a once días para poder llevar a cabo con éxito el gran golpe.</p>
+            <div class="details">
+                <h6></h6>
+                <h5 id="gen"> </h5>
+                <h4 id="date"> </h4>
+                <h3 id="rate"> <span>IMDB</span><i class="bi bi-star-fill"></i> </h3>
+            </div>
+            <div class="btns">
+
+                
+                <a target="_blank" class="Capitulo 1" href="Reproductor/player.html" id="play">Ver <i class="bi bi-play-fill"></i></a>
+                <video class="Capitulo 1" src="Reproductor/Mi Secreto Capitulo 1.fonkychu.mp4"></video>
+                <a href="#" download="The boys 480ph" id="low_q">480ph</a>
+                <a href="#" download="The boys 720ph" id="medium_q">720ph</a>
+                <a href="#" download="The boys 1080ph" id="high_q">1080ph</a>
+                
+            </div>
+        </div>
+        <section>
+            <h2>Populares</h2> 
+            <div class="cards">
+                <a href="#" class="card"></a>
+            </div>
+        </section>
+
+        
+    </header>
+    <script src="/app.js"></script>
+    <script src="/movie.json"></script>
+    <script>
+        fetch(json_url).then((Response) => Response.json())
+        .then(data => {
+            let movie_array = data.filter(ele => {
+                return ele.name === "Money Heist";
+            });
+
+            document.getElementById('title').innerText = movie_array[0].name;
+            document.getElementsByTagName('video')[0].setAttribute('src', movie_array[0].trailer)
+            document.getElementsByClassName('fondo')[0].setAttribute('src', movie_array[0].bposter)
+            document.getElementById('low_q').href = movie_array[0].low;
+            document.getElementById('medium_q').href = movie_array[0].medium;
+            document.getElementById('high_q').href = movie_array[0].high;
+            document.getElementById('gen').innerText = movie_array[0].genre;
+            document.getElementById('date').innerText = movie_array[0].date;
+            document.getElementById('rate').innerHTML = `<span>IMDB</span><i class="bi bi-star-fill"></i> ${movie_array[0].imdb}`;
+
+        }) 
+    </script>
+    <script src="player.js"></script>
+
+</body>
+</html>
